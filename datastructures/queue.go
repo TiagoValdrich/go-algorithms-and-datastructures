@@ -30,6 +30,11 @@ func (queue *Queue[T]) Enqueue(value T) {
 }
 
 func (queue *Queue[T]) Dequeue() T {
+	if queue.Size() == 0 {
+		var val T
+		return val
+	}
+
 	queue.mutex.Lock()
 	value := queue.values[0]
 	queue.values = queue.values[1:]
