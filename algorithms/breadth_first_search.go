@@ -15,7 +15,7 @@ type BfsParams struct {
 func BFS(params BfsParams) []string {
 	path := []string{}
 	visited := make(map[string]bool)
-	queue := datastructures.NewQueue[string]()
+	queue := datastructures.NewFifoQueue[string]()
 
 	queue.Enqueue(params.StartFrom)
 

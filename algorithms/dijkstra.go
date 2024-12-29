@@ -50,7 +50,7 @@ func Dijkstra(weightedGraph WeightedGraph, start string, end string) string {
 	costs := make(map[string]int)
 	parents := make(map[string]string)
 	visited := make(map[string]bool)
-	queue := datastructures.NewQueue[string]()
+	queue := datastructures.NewFifoQueue[string]()
 
 	// Initialize costs and parents for the rest of the nodes
 	for node := range weightedGraph {

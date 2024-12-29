@@ -8,7 +8,7 @@ import (
 )
 
 func TestQueue(t *testing.T) {
-	queue := datastructures.NewQueue[int]()
+	queue := datastructures.NewFifoQueue[int]()
 
 	t.Run("Queue should store values in FIFO order", func(t *testing.T) {
 		for i := 1; i <= 5; i++ {
